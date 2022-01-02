@@ -1,7 +1,7 @@
 const DUMMY_EVENTS = [
   {
     id: 'e1',
-    title: 'Programming for everyone',
+    title: 'This has been changed',
     description:
       'Everyone can learn to code! Yes, everyone! In this live event, we are going to go through all the key basics and get you started with programming as well.',
     location: 'Somestreet 25, 12345 San Somewhereo',
@@ -44,7 +44,9 @@ export function getFilteredEvents(dateFilter) {
 
   let filteredEvents = DUMMY_EVENTS.filter((event) => {
     const eventDate = new Date(event.date);
-    return eventDate.getFullYear() === year && eventDate.getMonth() === month - 1;
+    return (
+      eventDate.getFullYear() === year && eventDate.getMonth() === month - 1
+    );
   });
 
   return filteredEvents;
