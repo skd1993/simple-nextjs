@@ -15,7 +15,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }} # User of the server you want to ssh into
      
           script: |
-            cd /home/simple-nextjs
+            cd simple-nextjs
             git clone git@github.com:skd1993/simple-nextjs.git
             npm install
             npm run build
