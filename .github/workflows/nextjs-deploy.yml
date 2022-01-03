@@ -21,3 +21,4 @@ jobs:
             npm run build
             npm run start
             echo 'Deployment successful to digital ocean'
+            pm2 restart SimpleNestJS
